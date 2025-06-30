@@ -1,0 +1,59 @@
+1.From the list nums = [10, 25, 30, 45, 50, 60], create a set of numbers where the number is divisible by 5
+ but not divisible by 10 using set comprehension.
+ans.
+a=[10,25,30,45,50,60]
+res={ x for x in a if x%5==0 and x%10!=0}
+print(res)
+
+------------------------------------------------------------
+ 2.Write a program to sum the digits of all numbers in a list.
+     Example: [12, 34, 5] ➞ 1+2 + 3+4 + 5 = 15
+a=[12,34,5]
+total=0
+for x in a:
+     for y in str(x):
+          total+=int(y)
+print(total)
+
+
+---------------------------------------------------------
+# 3.Create a new list by repeating elements of a list n times.cls
+
+#              Example: [1, 2, 3], n = 2 ➞ [1, 2, 3, 1, 2, 3]
+
+a=[1,2,3]
+b=int(input())
+res=[y for x in range (b) for y in a]
+print(res)
+----------------------------------------------------------------------------------------------
+
+#4.Write a function to count how many prime numbers exist in a given range.
+
+a=int(input())
+count=1
+for x in range(3,a):
+    for y in range(2,x):
+        if x%y==0:
+            break
+    else:
+        count+=1
+print(count)
+                  (or) 
+
+res=[ x for x in range(2,a+1) if all (x%y!=0 for y in range(2,x))]
+print(len(res))
+
+--------------------------------------------------------------------------------------------------
+6)	Write a function to calculate the sum of digits of a number until a single-digit result is obtained.
+  Example: 9875 ➞ 9+8+7+5=29 ➞ 2+9=11 ➞ 1+1=2
+
+def single_digit(n):
+    while n >= 10:
+        n = sum(int(digit) for digit in str(n))
+    return n
+print(single_digit(9875))
+
+
+
+
+
