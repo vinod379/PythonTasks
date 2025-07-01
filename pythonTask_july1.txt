@@ -1,0 +1,51 @@
+#1.Create a dictionary from two lists:
+
+keys = ['id', 'name', 'age']
+values = [101, 'John', 25]
+res=dict(zip(keys,values))
+print(res)
+
+-------------------------------------------------------------------------------------------
+# 2.	Create a dictionary to store student name and age.
+details={}
+number_of_students=int(input())
+for x in range (number_of_students):
+    details["name"]=input()
+    details["age"]=int(input())
+print(details)
+                     
+-------------------------------------------------------------------------------------------
+#3.Create an empty dictionary and add key-value pairs one by one.
+details={}
+details["name"]=input()
+details["age"]=int(input())
+details["phoneNumber"]=int(input())
+print(details)
+
+------------------------------------------------------------------------------------------------
+#4.	Get the value of key "salary" from this dictionary:
+ EX: employee = {'name': 'John', 'age': 30, 'salary': 50000}
+print(employee["salary"])
+
+--------------------------------------------------------------------------------------------
+#5.	 Remove the last inserted key-value pair from the dictionary using an appropriate method
+employee = {'name': 'John', 'age': 30, 'salary': 50000}
+employee.popitem()
+print(employee)
+
+-------------------------------------------------------------------------------------------------------
+#6.Define packing and unpacking in Python. Also, provide one example for both packing and unpacking.
+1)packing:
+Packing means putting multiple values into a single variable (usually a tuple or list).
+
+a=10,20
+b=20,30
+c=30,50
+d=a,b,c
+print(d)
+
+2)unpacking:
+Unpacking means extracting values from a collection into separate variables.
+a=(100,200,300)
+b,c,d=a
+print(b,c,d)
